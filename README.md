@@ -25,7 +25,7 @@ Aing make Arch Linux jeung Hyprland salaku daily desktop environment. Teu aya ma
 
 Config-na masih bisa terus robah, jadi ulah heran lamun engke aya update anyar.
 
-## 🖥️ What's inside?
+## 🖥️ Naon jerona?
 
 | Component | Description |
 |---|---|
@@ -41,7 +41,7 @@ Config-na masih bisa terus robah, jadi ulah heran lamun engke aya update anyar.
 lamun erek ganti wallpaperna maneh kudu pasang lokasi di ~/.config/hypr/hyprland.lua
 ti dinya aya startupna swaybg jadi tinggal ganti lokasi na
 
-## 📸 Preview
+## 📸 Tah Skrinsut jamsut
 
 <div align="center">
 
@@ -51,7 +51,7 @@ ti dinya aya startupna swaybg jadi tinggal ganti lokasi na
 
 </div>
 
-## ⚙️ Requirements
+## ⚙️ Depensina jeng kabutuhana
 
 - Arch Linux
 - Hyprland
@@ -69,7 +69,7 @@ Installer bakal masang dependencies ieu:
 - swaybg
 - stow
 
-## 🚀 Installation
+## 🚀 Installasi
 
 Mun hayang nyobaan config aing, tinggal clone repo ieu:
 
@@ -94,7 +94,7 @@ Tinggal antosan nepi ka beres.
 
 **Catetan:** Installer ieu husus Arch Linux. Ulah dijalankeun make root.
 
-## 📁 Repository Structure
+## 📁 Structure repo
 
 ```text
 KRNL-DOTS/
@@ -124,7 +124,7 @@ KRNL-DOTS/
 └── README.md
 ```
 
-## 💾 Backup
+## 💾 Backupna
 
 Ulah hariwang teuing soal config bahela.
 
@@ -136,13 +136,13 @@ Installer bakal nyieun backup konfigurasi nu geus aya di:
 
 Jadi config heubeul teu langsung dipiceun.
 
-## 🛠️ Customization
+## 🛠️ Customisasi na
 
 Mun teu resep kana warna, keybind, layout, atawa tampilan-na, bebas oprek sorangan.
 
 Ieu mah dotfiles, lain barang keramat.
 
-## 👨‍💻 About
+## 👨‍💻 tentang uing
 
 Made by **Bian**.
 
