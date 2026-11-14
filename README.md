@@ -1,7 +1,7 @@
 
 <div align="center">
 
-# KRNL-DOTS
+# KRNL-DOTS   
 
 ### my linux setup, my own way.
 
@@ -36,6 +36,10 @@ Config-na masih bisa terus robah, jadi ulah heran lamun engke aya update anyar.
 | Fuzzel | Application launcher |
 | Cava | Audio visualizer |
 | Swaybg | Wallpaper manager |
+
+## Ganti wallpaper na
+lamun erek ganti wallpaperna maneh kudu pasang lokasi di ~/.config/hypr/hyprland.lua
+ti dinya aya startupna swaybg jadi tinggal ganti lokasi na
 
 ## 📸 Preview
 
