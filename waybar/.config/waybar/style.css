@@ -1,92 +1,89 @@
-/* FOG FOREST v2 | solid charcoal + muted fog palette */
+
 * {
-  font-family: "JetBrainsMono Nerd Font", "Noto Sans", sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  min-height: 0;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 12px;
+    font-weight: 600;
+    min-height: 0;
+    border: none;
 }
 
 window#waybar {
-  background: transparent;
-  color: #e2e0d8;
+    background: transparent;
+    color: #d8dee3;
 }
 
-.modules-left,
-.modules-center,
-.modules-right {
-  background: #252b30;
-  border: 1px solid #41494e;
-  border-radius: 4px;
-  padding: 0 7px;
-}
-
-#workspaces {
-  padding: 0;
-}
-
-#workspaces button {
-  color: #c4c5bf;
-  background: transparent;
-  border: 0;
-  border-radius: 2px;
-  padding: 0 10px;
-  margin: 4px 2px;
-  min-width: 17px;
-  box-shadow: none;
-  text-shadow: none;
-  transition: background 120ms ease, color 120ms ease;
-}
-
-#workspaces button:hover {
-  background: #3b4449;
-  color: #f0eee7;
-  box-shadow: none;
-}
-
-#workspaces button.active {
-  background: #d2d0c6;
-  color: #252b30;
-}
-
-#workspaces button.urgent {
-  background: #8d7770;
-  color: #ffffff;
-}
-
-#clock {
-  color: #e5e2d9;
-  padding: 0 12px;
-  font-weight: 700;
-}
-
+#workspaces,
+#window,
+#clock,
 #network,
 #pulseaudio,
 #battery,
 #tray {
-  color: #d8d8d1;
-  padding: 0 9px;
+    background: #252b30;
+    border: 1px solid #41494e;
+    border-radius: 4px;
+    padding: 0 12px;
+    margin: 3px 2px;
 }
 
-#network.disconnected,
-#pulseaudio.muted {
-  color: #aaa9a1;
+#workspaces {
+    padding: 0 5px;
+}
+
+#workspaces button {
+    color: #78838b;
+    padding: 0 10px;
+    margin: 4px 2px;
+    border-radius: 3px;
+    background: transparent;
+}
+
+#workspaces button.active {
+    color: #f0f3f5;
+    background: #46515a;
+}
+
+#workspaces button:hover {
+    background: #343e46;
+    color: #ffffff;
+}
+
+#window {
+    color: #aab5bd;
+}
+
+#clock {
+    color: #e1e6ea;
+    letter-spacing: 0.5px;
+}
+
+#network {
+    color: #bac5cc;
+}
+
+#pulseaudio {
+    color: #c5cdd3;
+}
+
+#battery {
+    color: #d0d8dd;
 }
 
 #battery.warning {
-  color: #d5b98b;
+    color: #e6b875;
 }
 
 #battery.critical {
-  color: #d28c83;
+    color: #df8585;
+}
+
+#tray {
+    padding: 0 10px;
 }
 
 tooltip {
-  background: #252b30;
-  color: #e5e2d9;
-  border: 1px solid #596168;
-  border-radius: 4px;
-}
-
-tooltip label {
-  padding: 5px;
+    background: #252b30;
+    border: 1px solid #41494e;
+    color: #e1e6ea;
+    border-radius: 4px;
 }
