@@ -19,6 +19,18 @@ PACKAGES=(
     waybar
 )
 
+WALLPAPER_DIR="$HOME/Pictures/KRNL"
+
+mkdir -p "$WALLPAPER_DIR"
+
+if [ -d "$DOTFILES_DIR/wallpaper" ]; then
+    cp -r "$DOTFILES_DIR/wallpaper/." "$WALLPAPER_DIR/"
+    echo "[KRNL] Wallpapers installed successfully!"
+else
+    echo "[KRNL] Wallpaper directory not found!"
+fi
+
+
 DEPENDENCIES=(
     cava
     fastfetch
