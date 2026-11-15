@@ -31,7 +31,7 @@ Config-na masih bisa terus robah, jadi ulah heran lamun engke aya update anyar.
 
 ## 🖥️ Naon jerona?
 
-| Component | Description |
+| komponenna | Deskripsina |
 |---|---|
 | Hyprland | Window manager |
 | Waybar | Status bar |
