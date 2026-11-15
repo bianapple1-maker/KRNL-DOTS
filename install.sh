@@ -23,8 +23,8 @@ WALLPAPER_DIR="$HOME/Pictures/KRNL"
 
 mkdir -p "$WALLPAPER_DIR"
 
-if [ -d "$DOTFILES_DIR/wallpaper" ]; then
-    cp -r "$DOTFILES_DIR/wallpaper/." "$WALLPAPER_DIR/"
+if [ -d "$REPO_DIR/wallpaper" ]; then
+    cp -r "$REPO_DIR/wallpaper/." "$WALLPAPER_DIR/"
     echo "[KRNL] Wallpapers installed successfully!"
 else
     echo "[KRNL] Wallpaper directory not found!"
@@ -41,10 +41,12 @@ DEPENDENCIES=(
     swaybg
     stow
     hyprshot
+    hyprlock
 )
 
 BACKUP_DIR="$HOME/.config/krnl-backup-$(date +%Y%m%d-%H%M%S)"
 BACKUP_CREATED=0
+
 
 # Colors
 GREEN='\033[0;32m'
@@ -99,6 +101,32 @@ info "Updating package database and installing dependencies..."
 sudo pacman -Syu --needed "${DEPENDENCIES[@]}"
 
 success "Dependencies installed."
+
+# ==========================================
+# INSTALL HYPRLOCK CONFIG
+# ==========================================
+
+info "Installing Hyprlock configuration..."
+
+HYPRLOCK_SOURCE="$REPO_DIR/hypr/.config/hypr/hyprlock.conf"
+HYPRLOCK_TARGET="$HOME/.config/hypr/hyprlock.conf"
+
+if [[ -f "$HYPRLOCK_SOURCE" ]]; then
+
+    mkdir -p "$HOME/.config/hypr"
+
+    if [[ -f "$HYPRLOCK_TARGET" ]]; then
+        cp "$HYPRLOCK_TARGET" "$BACKUP_DIR/hyprlock.conf"
+        info "Existing Hyprlock config backed up."
+    fi
+
+    cp "$HYPRLOCK_SOURCE" "$HYPRLOCK_TARGET"
+
+    success "Hyprlock configuration installed!"
+
+else
+    error "Hyprlock configuration not found!"
+fi
 
 # ==========================================
 # CHECK REPOSITORY
