@@ -1,50 +1,60 @@
+
 {
   "layer": "top",
   "position": "top",
-  "height": 38,
-  "spacing": 7,
-  "margin-top": 7,
-  "margin-left": 7,
-  "margin-right": 7,
+  "height": 44,
+  "spacing": 5,
+  "margin-top": 8,
+  "margin-left": 10,
+  "margin-right": 10,
 
-  "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["clock"],
-  "modules-right": ["network", "pulseaudio", "battery", "tray"],
+  "modules-left": [
+    "hyprland/workspaces",
+    "hyprland/window"
+  ],
+
+  "modules-center": [
+    "clock"
+  ],
+
+  "modules-right": [
+    "network",
+    "pulseaudio",
+    "battery",
+    "tray"
+  ],
 
   "hyprland/workspaces": {
-    "disable-scroll": true,
-    "all-outputs": true,
-    "active-only": false,
     "format": "{name}",
+    "on-click": "activate",
     "persistent-workspaces": {
       "*": 5
     }
   },
 
+  "hyprland/window": {
+    "format": "{title}",
+    "max-length": 35,
+    "separate-outputs": true
+  },
+
   "clock": {
-    "format": "  {:%H:%M}",
-    "tooltip": true,
+    "format": "󰥔  {:%H:%M  |  %a, %d %b}",
     "tooltip-format": "{:%A, %d %B %Y}"
   },
 
   "network": {
-    "format-wifi": "  {essid}",
-    "format-ethernet": "󰈀  Wired",
+    "format-wifi": "󰖩  {essid}",
+    "format-ethernet": "󰈀  Connected",
     "format-disconnected": "󰖪  Offline",
-    "tooltip": true,
-    "tooltip-format": "{ifname}: {ipaddr}/{cidr}\nSignal: {signalStrength}%"
+    "tooltip-format": "{ifname}: {ipaddr}"
   },
 
   "pulseaudio": {
-    "format": "{icon}  {volume}%",
-    "format-bluetooth": "󰂯  {volume}%",
-    "format-muted": "󰖁  Mute",
-    "format-icons": {
-      "default": ["", "", ""]
-    },
+    "format": "󰕾  {volume}%",
+    "format-muted": "󰖁  Muted",
     "on-click": "pavucontrol",
-    "scroll-step": 5,
-    "tooltip": true
+    "scroll-step": 5
   },
 
   "battery": {
@@ -52,17 +62,25 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "󰁹  {capacity}%",
+    "format": "{icon}  {capacity}%",
     "format-charging": "󰂄  {capacity}%",
-    "format-plugged": "󰂄  {capacity}%",
-    "format-warning": "󰁻  {capacity}%",
-    "format-critical": "󰁺  {capacity}%",
-    "tooltip": true,
-    "tooltip-format": "{capacity}% • {timeTo}"
+    "format-icons": [
+      "󰂎",
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ]
   },
 
   "tray": {
-    "icon-size": 15,
+    "icon-size": 16,
     "spacing": 8
   }
 }
