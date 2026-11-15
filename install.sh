@@ -28,6 +28,7 @@ DEPENDENCIES=(
     waybar
     swaybg
     stow
+    hyprshot
 )
 
 BACKUP_DIR="$HOME/.config/krnl-backup-$(date +%Y%m%d-%H%M%S)"
