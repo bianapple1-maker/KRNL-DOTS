@@ -10,6 +10,9 @@
 [Hyprland](https://hyprland.org/) · Arch Linux · Linux Rice
 
 ![Preview](assets/preview.png)
+
+##Ejeng ie
+
 ![Preview](assets/preview2.png)
 
 *I made this setup because default desktop is boring as hell.*
