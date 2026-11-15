@@ -1,110 +1,139 @@
 
 <div align="center">
 
-# KRNL-DOTS   
+# ❄ KRNL-DOTS
 
-### my linux setup, my own way.
+### Your Linux. Your Own Way.
 
-**Dotfiles pribadi punya Bian.**
+A personal Arch Linux + Hyprland configuration.
 
-[Hyprland](https://hyprland.org/) · Arch Linux · Linux Rice
+<br>
 
-![Preview](assets/preview.png)
+![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793D1?style=flat-square&logo=archlinux&logoColor=white)
+![Hyprland](https://img.shields.io/badge/Hyprland-89DCEB?style=flat-square&logo=hyprland&logoColor=1E1E2E)
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-88C0D0?style=flat-square)
 
-Ejeng ie
+<br>
 
-![Preview](assets/preview2.png)
+<img src="assets/preview.png" width="92%" alt="KRNL-DOTS Desktop Preview">
 
-*I made this setup because default desktop is boring as hell.*
+<br>
+
+**Minimal · Lightweight · Personal**
+
+*Built because the default desktop wasn't enough.*
 
 </div>
 
 ---
 
-## 🤨 Naon sih ieu?
+## 01. About
 
-Jadi ieu teh KRNL-DOTS, kumpulan konfigurasi Linux pribadi nu ku aing dijieun jeung dioprek sorangan.
+**KRNL-DOTS** is my personal collection of Linux configurations, built and customized for my daily workflow.
 
-Aing make Arch Linux jeung Hyprland salaku daily desktop environment. Teu aya maksud nyieun setup paling alus saalam dunya, ngan hayang desktop nu nyaman, enteng, rapih, jeung boga karakter sorangan.
+Running on Arch Linux with Hyprland, this setup focuses on:
 
-Config-na masih bisa terus robah, jadi ulah heran lamun engke aya update anyar.
+- A clean and minimal desktop.
+- Lightweight performance.
+- Consistent visual design.
+- A comfortable terminal experience.
+- Easy customization.
 
-## 🖥️ Naon jerona?
+This project is constantly evolving as I experiment with new configurations and ideas.
 
-| komponenna | Deskripsina |
-|---|---|
-| Hyprland | Window manager |
-| Waybar | Status bar |
+## 02. Desktop Preview
+
+<div align="center">
+
+### Main Desktop
+
+<img src="assets/preview.png" width="100%" alt="Main Desktop">
+
+### Another Look
+
+<img src="assets/preview2.png" width="100%" alt="Desktop Preview 2">
+
+*My current Linux rice. More updates coming.*
+
+</div>
+
+## 03. What's Inside?
+
+| Component | Description |
+|:--|:--|
+| Hyprland | Dynamic tiling window manager |
+| Waybar | Custom status bar |
 | Kitty | Terminal emulator |
 | Fastfetch | System information |
 | Fuzzel | Application launcher |
 | Cava | Audio visualizer |
 | Swaybg | Wallpaper manager |
+| Hyprlock | Screen locker |
+| Hyprshot | Screenshot utility |
 
-## Ganti wallpaper na
-lamun erek ganti wallpaperna maneh kudu pasang lokasi di ~/.config/hypr/hyprland.lua
-ti dinya aya startupna swaybg jadi tinggal ganti lokasi na
+## 04. Requirements
 
-## 📸 Tah Skrinsut jamsut
-
-<div align="center">
-
-![Desktop Preview](assets/preview.png)
-
-*My current desktop rice.*
-
-</div>
-
-## ⚙️ Depensina jeng kabutuhana
+Before installing, make sure you have:
 
 - Arch Linux
-- Hyprland
 - Internet connection
-- sudo privileges
+- Git
+- Sudo privileges
+- A working Hyprland environment
 
-Installer bakal masang dependencies ieu:
+### Dependencies
 
-- cava
-- fastfetch
-- fuzzel
-- hyprland
-- kitty
-- waybar
-- swaybg
-- stow
+The installer handles the required packages:
 
-## 🚀 Installasi
+```text
+cava
+fastfetch
+fuzzel
+hyprland
+kitty
+waybar
+swaybg
+stow
+```
 
-Mun hayang nyobaan config aing, tinggal clone repo ieu:
+## 05. Installation
+
+Ready to try KRNL-DOTS?
+
+**1. Clone the repository**
 
 ```bash
 git clone https://github.com/bianapple1-maker/KRNL-DOTS.git
 ```
 
-Asup ka folder-na:
+**2. Enter the directory**
 
 ```bash
 cd KRNL-DOTS
 ```
 
-Jalankeun installer:
+**3. Run the installer**
 
 ```bash
 chmod +x install.sh
 ./install.sh
 ```
 
-Tinggal antosan nepi ka beres.
+Wait for the installation process to finish.
 
-**Catetan:** Installer ieu husus Arch Linux. Ulah dijalankeun make root.
+> [!WARNING]
+> This installer is designed specifically for Arch Linux.
+> Do not execute it as root.
 
-## 📁 Structure repo
+## 06. Project Structure
 
 ```text
 KRNL-DOTS/
 │
 ├── assets/
-│   └── preview.png
+│   ├── preview.png
+│   └── preview2.png
 │
 ├── cava/
 │   └── .config/cava/
@@ -128,38 +157,71 @@ KRNL-DOTS/
 └── README.md
 ```
 
-## 💾 Backupna
+## 07. Wallpaper Configuration
 
-Ulah hariwang teuing soal config bahela.
+Want to change your wallpaper?
 
-Installer bakal nyieun backup konfigurasi nu geus aya di:
+Open:
+
+```bash
+~/.config/hypr/hyprland.lua
+```
+
+Find the Swaybg startup configuration and replace the wallpaper path with your own image location.
+
+Save the file and restart the wallpaper process.
+
+## 08. Backup & Safety
+
+Don't worry about your previous configurations.
+
+KRNL-DOTS installer creates a backup of existing configuration files before replacing them.
+
+Backup location:
 
 ```text
 ~/.config/krnl-backup-YYYYMMDD-HHMMSS
 ```
 
-Jadi config heubeul teu langsung dipiceun.
+Your previous configuration files are kept safe in a separate directory.
 
-## 🛠️ Customisasi na
+## 09. Make It Yours
 
-Mun teu resep kana warna, keybind, layout, atawa tampilan-na, bebas oprek sorangan.
+Feel free to customize anything:
 
-Ieu mah dotfiles, lain barang keramat.
+- Colors and themes.
+- Keybindings.
+- Window layouts.
+- Wallpapers.
+- Terminal appearance.
+- Waybar modules.
 
-## 👨‍💻 tentang uing
+These are dotfiles, not sacred artifacts.
 
-Made by **Bian**.
+Break something, learn something, fix it, and make it yours.
 
-Arch Linux enthusiast, Linux tinkerer, and someone who enjoys breaking and fixing configs.
+## 10. About the Developer
 
-Teu kudu sampurna, nu penting jalan jeung aing resep make-na.
+<div align="center">
+
+### Bian
+
+Linux enthusiast · Developer · Tinkerer
+
+I enjoy exploring Linux, experimenting with configurations, and building things from scratch.
+
+**Built with curiosity and a lot of terminal commands.**
+
+</div>
 
 ---
 
 <div align="center">
 
-**KRNL-DOTS**
+### KRNL-DOTS
 
-*Built with Linux, caffeine, and a lot of terminal commands.*
+*Your Linux. Your Own Way.*
+
+Made with Linux by **Bian**.
 
 </div>
